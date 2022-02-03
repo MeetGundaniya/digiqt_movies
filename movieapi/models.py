@@ -26,4 +26,4 @@ class MovieDB(models.Model):
   class Meta:
     verbose_name = "Movies"
     unique_together = [("name", "release")]
-    ordering = ("name", "rating", "release", "duration", "description")
+    ordering = ("-rating", "-release", "name")
