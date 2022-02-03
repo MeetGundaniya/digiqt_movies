@@ -4,7 +4,9 @@ from movieapi.models import MovieDB
 # Register your models here.
 
 class MovieDBModelAdmin(admin.ModelAdmin):
-  pass
+  list_display = ('name', 'rating', 'release', 'duration')
+  search_fields = ('name',)
+  list_filter = ('rating',)
 
 
 
