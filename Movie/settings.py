@@ -127,18 +127,3 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-
-
-if 'shell_plus' in sys.argv:
-
-  INSTALLED_APPS.append(
-    "django_extensions"
-  )
-
-  os.environ['JUPYTER_ALLOW_INSECURE_WRITES'] = 'true'
-  os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = 'true'
-  os.environ["JUPYTER_PATH"] = str(BASE_DIR)
-
-  SHELL_PLUS = 'notebook'
-  NOTEBOOK_ARGUMENTS = ['--no-browser']
